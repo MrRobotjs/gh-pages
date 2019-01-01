@@ -33,10 +33,10 @@ const NotFoundPage = () => (
   <Layout>
     <Section.Container id="404" Background={Background} css={{ padding: 0 }}>
       <Box w={[320, 400, 600]} m="auto">
-        <Heading color="primaryDark" fontSize={['9rem', '13rem', '16rem']}>
+        <Heading color="primaryBrightText" fontSize={['9rem', '13rem', '16rem']}>
           404k
         </Heading>
-        <Heading color="secondary" fontSize={['4rem', '5rem', '6rem']}>
+        <Heading color="secondaryBrightText" fontSize={['4rem', '5rem', '6rem']}>
           {"There isn't anything here"}
         </Heading>
       </Box>
