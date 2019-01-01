@@ -3,17 +3,15 @@ import styled from 'styled-components';
 import { Box, Card as CardRebass } from 'rebass';
 
 export const CardContainer = styled.div`
-  display: grid;
-  grid-gap: 30px;
-
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(${props => props.minWidth}, 1fr)
-  );
-  justify-items: center;
-
-  @media only screen and (max-width: 400px) {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  div[class="react-reveal"] {
+    flex-basis: 48%;
+  }
+  @media only screen and (min-width: 850px) {
+    flex-direction: row;
   }
 `;
 
@@ -24,6 +22,14 @@ const NewCard = styled(CardRebass)`
   top: 0;
   background-color: ${props => props.theme.colors.primaryLight};
   color: ${props => props.theme.colors.secondaryDarkWhite};
+  margin-bottom: 15px;
+
+  &>div {
+    flex-direction: column;
+    @media (min-width: 850px) {
+      flex-direction: row;
+    }
+  }
 
   &:hover {
     top: -10px;

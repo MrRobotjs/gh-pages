@@ -6,6 +6,6 @@ module.exports = {
   start_url: '/',
   background_color: theme.colors.background,
   theme_color: theme.colors.primary,
-  display: 'minimal-ui',
+  display: `standalone`,
   icon: 'media/icon.png',
 };

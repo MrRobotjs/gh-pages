@@ -52,20 +52,20 @@ const Title = styled(Subhead)`
 
 const TextContainer = styled.div`
   display: flex;
-  width: calc(100% - 100px);
+  /*width: calc(100% - 100px);*/
   flex-direction: column;
   padding: 10px;
 
-  @media (min-width: 400px) {
+  @media (min-width: 850px) {
     width: calc(100% - 200px);
   }
 `;
 
 const ImageContainer = styled.div`
-  width: 100px;
+  /*width: 100px;*/
   position: relative;
 
-  @media (min-width: 400px) {
+  @media (min-width: 850px) {
     width: 200px;
   }
 `;
@@ -112,7 +112,7 @@ const Project = ({
             {name}
           </Title>
         </span>
-        <Text width="100%" css={{ overflow: 'auto' }}>
+        <Text width="100%" css={{ overflow: 'visible' }}>
           {excerpt}
         </Text>
       </TextContainer>

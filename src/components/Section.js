@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 import Slide from 'react-reveal/Slide';
 
 const SectionContainer = styled.div`
-  min-height: 100vh;
+  /*min-height: 100vh;
   min-width: 320px;
-  max-width: 1366px;
+  max-width: 1366px;*/
   display: flex;
   margin: 0 1rem;
   flex: 0 1 auto;

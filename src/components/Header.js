@@ -52,6 +52,25 @@ const Btn = styled.a`
   padding: 0.75rem 1rem;
   line-height: 1;
 `
+const Imagee = styled.img`
+  margin: 0 auto;
+  @media (min-width: 850px) {
+    margin: unset;
+  }
+`
+
+const Flexx = styled.div`
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /*padding: 16px;*/
+  @media (min-width: 850px) {
+    display: flex;
+    margin-right: 64px;
+  }
+`
+
 const formatLinks = allLinks =>
   Object.entries(allLinks).reduce(
     (acc, [key, value]) => {
@@ -83,7 +102,7 @@ const Header = () => (
             const { home, links } = formatLinks(allLinks);
 
             const homeLink = home && (
-              <Image
+              <Imagee
                 src={Logo}
                 width="50px"
                 alt="Portfolio Logo"
@@ -103,10 +122,10 @@ const Header = () => (
             return (
               <Fragment>
                 {homeLink}
-                <Flex mr={[0, 3, 5]}>
+                <Flexx mr={[0, 3, 5]}>
                 {navLinks}
                 <ResumeBtn><Btn href="https://docs.google.com/document/d/1t1MEK4x3o-WOp8yK2aU1jbu3wN_hmqh0lOeejQ7wCFM/edit?usp=sharing" target="blank">Resume</Btn></ResumeBtn>
-                </Flex>
+                </Flexx>
               </Fragment>
             );
           }}
