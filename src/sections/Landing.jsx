@@ -6,7 +6,51 @@ import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import MouseIcon from '../components/MouseIcon';
 import Triangle from '../components/Triangle';
+import styled from 'styled-components';
 
+const SubText = styled.div`
+  color: ${props => props.theme.colors.secondaryDarkWhite};
+  width: calc(100% - 60%);
+  margin-top: 1rem;
+  line-height: 1.75rem;
+  a {
+    display: inline-block;
+    transition: color 250ms, text-shadow 250ms;
+    color: ${props => props.theme.colors.primaryBrightText};
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      z-index: -1;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: ${props => props.theme.colors.primaryBrightText};
+      transition: all 250ms;
+    }
+
+    &:hover {
+      color: black;
+
+      &::after {
+        height: 110%;
+        width: 110%;
+      }
+    }
+  }
+`
+const SmallHeader = styled.div`
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: ${props => props.theme.colors.primary};
+  font-family: "Roboto Mono";
+`
 const Background = () => (
   <div>
     <Triangle
@@ -60,14 +104,15 @@ const LandingPage = () => (
 
         return (
           <Fragment>
+            <SmallHeader>Hi, my name is</SmallHeader>
             <Heading
-              textAlign="center"
+              textAlign="left"
               is="h1"
               color="primaryWhite"
               fontSize={[5, 6, 8]}
-              mb={[3, 4, 5]}
+              mb={[3]}
             >
-              {`Hello, I'm ${name}!`}
+              {`${name}.`}
             </Heading>
 
             <Heading
@@ -75,7 +120,7 @@ const LandingPage = () => (
               color="secondaryDarkWhite"
               fontSize={[4, 5, 6]}
               mb={[2, 4]}
-              textAlign="center"
+              textAlign="left"
             >I make
               <TextLoop>
                 {roles.map(text => (
@@ -86,6 +131,9 @@ const LandingPage = () => (
               </TextLoop>
               Websites.
             </Heading>
+            <SubText>
+              I'm a software engineer/web designer based in <a href="https://goo.gl/maps/vBAByYECqVS2" target="blank">Ontario, CA</a> specializing in designing and designing exceptional, high-quality websites and applications for the web. You can get the document version of my resume <a href="https://docs.google.com/document/d/1t1MEK4x3o-WOp8yK2aU1jbu3wN_hmqh0lOeejQ7wCFM/edit?usp=sharing" target="blank">here</a>.
+            </SubText>
             <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
               {socialLinks.map(({ id, ...rest }) => (
                 <Label mx={3} fontSize={[5, 6, 6]} key={id}>

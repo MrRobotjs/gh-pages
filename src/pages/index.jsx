@@ -5,8 +5,9 @@ import About from '../sections/About';
 import Projects from '../sections/Projects';
 import Writing from '../sections/Writing';
 import Technologies from '../sections/Technologies';
-import Contact from '../sections/Contact'
-import Social from '../sections/Social'
+import Email from '../sections/Email';
+import Contact from '../sections/Contact';
+import Social from '../sections/Social';
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <Projects />
     <Technologies />
     <Writing />
+    <Email />
     <Contact />
     <Social />
   </Layout>
