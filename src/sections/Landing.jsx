@@ -13,8 +13,10 @@ const SubText = styled.div`
   width: 100%;
   margin-top: 1rem;
   line-height: 1.75rem;
+  margin-bottom: 1rem;
   @media (min-width: 850px) {
     width: calc(100% - 60%);
+    margin-bottom: unset;
   }
   a {
     display: inline-block;
