@@ -133,7 +133,7 @@ const LandingPage = () => (
             >I make
               <TextLoop>
                 {roles.map(text => (
-                  <p style={{ width: "auto", margin: "0 17px"}} key={text}>
+                  <p style={{ width: "auto", margin: "0 15px"}} key={text}>
                     {text}
                   </p>
                 ))}
