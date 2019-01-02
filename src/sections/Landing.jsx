@@ -10,9 +10,12 @@ import styled from 'styled-components';
 
 const SubText = styled.div`
   color: ${props => props.theme.colors.secondaryDarkWhite};
-  width: calc(100% - 60%);
+  width: 100%;
   margin-top: 1rem;
   line-height: 1.75rem;
+  @media (min-width: 850px) {
+    width: calc(100% - 60%);
+  }
   a {
     display: inline-block;
     transition: color 250ms, text-shadow 250ms;
@@ -50,6 +53,10 @@ const SmallHeader = styled.div`
   font-weight: 500;
   color: ${props => props.theme.colors.primary};
   font-family: "Roboto Mono";
+  margin-bottom: 1rem;
+  @media (min-width: 850px) {
+    margin-bottom: unset;
+  }
 `
 const Background = () => (
   <div>

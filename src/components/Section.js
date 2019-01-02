@@ -14,7 +14,7 @@ const SectionContainer = styled.div`
   flex: 0 1 auto;
   flex-direction: column;
   justify-content: center;
-  padding: 9rem 1rem;
+  padding: 8rem 1rem;
   scroll-behavior: smooth;
   @media (min-width: 850px) {
     margin: 0 7rem;
