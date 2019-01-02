@@ -19,6 +19,7 @@ module.exports = client.getEntries().then(entries => {
   return {
     plugins: [
       'gatsby-plugin-react-helmet',
+      'gatsby-plugin-netlify-cache',
       {
         resolve: 'gatsby-plugin-manifest',
         options: manifestConfig,
