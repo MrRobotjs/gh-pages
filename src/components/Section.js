@@ -19,6 +19,20 @@ const SectionContainer = styled.div`
   @media (min-width: 850px) {
     margin: 0 7rem;
   }
+  [class^="What's Next?"] {
+    text-align: center;
+    font-size: 1.1rem;
+    span {
+      border-bottom-width: 4px;
+      &::before {
+        font-size: 0.7rem !important;
+      }
+      &::after {
+        height: 4px;
+        bottom: -4px;
+      }
+    }
+  }
 `;
 
 const DefaultBackground = () => <div />;
