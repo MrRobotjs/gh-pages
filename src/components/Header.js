@@ -11,7 +11,7 @@ const capitalize = s => s && s[0].toUpperCase() + s.slice(1);
 
 const HeaderContainer = styled(Headroom)`
   .headroom--pinned {
-    background: rgba(0, 14, 11, 1);
+    background: ${props => props.theme.colors.background};
     box-shadow: rgba(0, 14, 11, 0.9) 0px 2px 4px;
   }
 
@@ -31,7 +31,7 @@ const ResumeBtn = styled.label`
   font-size: 16px;
   margin-bottom: 4px;
   margin-left: 18px;
-  color: #FFFFFF;
+  color: ${props => props.theme.colors.primary};
   cursor: pointer;
 `
 
@@ -48,14 +48,19 @@ const Btn = styled.a`
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
   scroll-behavior: smooth;
-  border: 1px solid #fff;
+  border: 1px solid;
   padding: 0.75rem 1rem;
   line-height: 1;
+  border-radius: 2px;
+  &:hover {
+    background-color: rgba(0, 196, 147, 0.15);
+  }
 `
 const Imagee = styled.img`
   margin: 0 auto;
   @media (min-width: 850px) {
     margin: unset;
+    margin-left: 1.2rem;
   }
 `
 
@@ -65,6 +70,9 @@ const Flexx = styled.div`
   justify-content: space-between;
   align-items: center;
   /*padding: 16px;*/
+  label {
+    margin-bottom: unset;
+  }
   @media (min-width: 850px) {
     display: flex;
     margin-right: 64px;
@@ -95,7 +103,7 @@ const Header = () => (
         flexWrap="wrap"
         justifyContent="space-between"
         alignItems="center"
-        p={3}
+        p={2}
       >
         <SectionLinks>
           {({ allLinks }) => {

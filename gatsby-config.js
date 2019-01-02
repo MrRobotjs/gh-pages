@@ -28,7 +28,7 @@ module.exports = client.getEntries().then(entries => {
       {
         resolve: `gatsby-plugin-google-fonts`,
         options: {
-          fonts: [`cabin`, `Open Sans`],
+          fonts: [`cabin`, `Open Sans`, `Roboto Mono`],
         },
       },
       {

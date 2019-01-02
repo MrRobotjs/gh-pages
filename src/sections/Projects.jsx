@@ -134,8 +134,8 @@ const Project = ({
         <SocialLinksContainer>
           <Label mx={1} fontSize={5}>
             <SocialLink
-              color="primary"
-              hoverColor="primaryLight"
+              color="secondaryDarkWhite"
+              hoverColor="primary"
               name="Check repository"
               fontAwesomeIcon="github"
               url={repositoryUrl}
@@ -144,8 +144,8 @@ const Project = ({
           {projectUrl && 
             <Label mx={1} fontSize={5}>
               <SocialLink
-                color="primary"
-                hoverColor="primaryLight"
+                color="secondaryDarkWhite"
+                hoverColor="primary"
                 fontSize={5}
                 mx={1}
                 name="See project"
@@ -188,7 +188,7 @@ const Projects = () => (
       render={({ contentfulAbout }) => (
         <CardContainer minWidth="350px">
           {contentfulAbout.projects.map((p, i) => (
-            <Fade bottom delay={i * 200}>
+            <Fade bottom delay={i * 200} key={p.id} >
               <Project key={p.id} {...p} />
             </Fade>
           ))}

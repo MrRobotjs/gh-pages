@@ -12,7 +12,7 @@ import ImageSubtitle from '../components/ImageSubtitle';
 const Background = () => (
   <div>
     <Triangle
-      color="secondary"
+      color="secondaryLight"
       height={['80vh', '80vh']}
       width={['100vw', '100vw']}
       invertX
@@ -47,25 +47,25 @@ const Title = styled(Subhead)`
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${props => props.theme.colors.primary} 5px solid;
+  border-bottom: ${props => props.theme.colors.primary} 3px solid;
 `;
 
 const TextContainer = styled.div`
   display: flex;
-  width: calc(100% - 100px);
+  /*width: calc(100% - 100px);*/
   flex-direction: column;
   padding: 10px;
 
-  @media (min-width: 400px) {
+  @media (min-width: 850px) {
     width: calc(100% - 200px);
   }
 `;
 
 const ImageContainer = styled.div`
-  width: 100px;
+  /*width: 100px;*/
   position: relative;
 
-  @media (min-width: 400px) {
+  @media (min-width: 850px) {
     width: 200px;
   }
 `;
@@ -95,9 +95,59 @@ const SocialLinksContainer = styled.div`
   right: 6px;
 `;
 
+const Technology = ({
+  name,
+  excerpt,
+  projectUrl,
+  repositoryUrl,
+  type,
+  publishedDate,
+  logo,
+  node
+}) => (
+  <Card p={0}>
+    <Flex>
+      <TextContainer>
+        <span>
+          <Title my={2} pb={1} color="secondaryBrightText">
+            {node.name}
+          </Title>
+        </span>
+        <Text width="100%" css={{ overflow: 'visible' }}>
+          {excerpt}
+        </Text>
+      </TextContainer>
+      
+    </Flex>
+  </Card>
+);
+
 const Technologies = () => (
-  <Section.Container id="Technologies" Background={Background}>
-    <Section.Header name="Technologies" icon="<>" label="code" />
+  <Section.Container id="technologies" Background={Background}>
+    <Section.Header name="Technologies I've Used'" icon="💻" label="notebook" />
+    <StaticQuery
+      query={graphql`
+        query TechnologiesQuery {
+          allContentfulTechnology {
+            edges {
+              node {
+                id
+                name
+              }
+            }
+          }
+        }
+      `}
+      render={({ allContentfulTechnology }) => (
+        <CardContainer minWidth="350px">
+          {allContentfulTechnology.edges.map((node, i) => (
+            <Fade bottom delay={i * 200} key={node.id} >
+              <Technology key={node.id} {...node} />
+            </Fade>
+          ))}
+        </CardContainer>
+      )}
+    />
   </Section.Container>
 );
 

@@ -53,6 +53,15 @@ const LinkAnimated = styled.span`
     `${props.borderWidth} dashed ${props.theme.colors.primaryLight}`};
   transition: 0.4s;
 
+  &::before {
+  counter-increment: headers;
+  content: '0'counter(headers)'.';
+  margin-right: 7px;
+  font-size: 1.4rem;
+  color: ${props => props.theme.colors.primary};
+  font-family: 'Roboto Mono';
+  }
+
   &:after {
     content: '';
     position: absolute;
@@ -75,7 +84,7 @@ const LinkAnimated = styled.span`
 
 const Header = ({ name, icon = '', label = '' }) => (
   <Slide left>
-    <Heading color="secondaryDark" mb={4}>
+    <Heading color="secondaryDark" mb={4} className={name}>
       <LinkAnimated borderWidth="5px">
         {name}
         {icon && (

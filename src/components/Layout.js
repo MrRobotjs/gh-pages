@@ -18,6 +18,7 @@ body {
   font-family: Cabin;
   overflow-x: hidden;
   background-color: #0a2f2a;
+  counter-reset: links headers;
 }
 `;
 

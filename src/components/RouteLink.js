@@ -14,7 +14,18 @@ const LinkAnimated = styled.span`
     props.selected && props.theme.colors.secondaryDark};
   transition: 0.4s;
   scroll-behavior: smooth;
-  color: rgb(204, 246, 236);
+  color: ${props => props.theme.colors.secondaryDarkWhite};
+  color: ${props =>
+    props.selected && props.theme.colors.primary};
+  font-size: 1rem;
+
+  &::before {
+  counter-increment: links;
+  content: '0'counter(links)'.';
+  margin-right: 7px;
+  color: ${props => props.theme.colors.primary};
+  font-family: 'Roboto Mono';
+  }
 
   &:after {
     content: '';
@@ -22,7 +33,9 @@ const LinkAnimated = styled.span`
     right: 0;
     width: 0;
     bottom: -${props => props.borderWidth};
-    background: ${props => props.theme.colors.secondary};
+    background: ${props => props.theme.colors.secondaryLight};
+    background: ${props =>
+    props.selected && props.theme.colors.secondaryDark};
     height: ${props => props.borderWidth};
     transition-property: width;
     transition-duration: 0.3s;
@@ -43,7 +56,7 @@ const RouteLink = ({ onClick, selected, children }) => (
     fontSize={[2, 3]}
     css={{ cursor: 'pointer' }}
   >
-    <LinkAnimated onClick={onClick} selected={selected} borderWidth="4px">
+    <LinkAnimated onClick={onClick} selected={selected} borderWidth="3px">
       {children}
     </LinkAnimated>
   </Label>

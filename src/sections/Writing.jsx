@@ -45,6 +45,7 @@ const EllipsisHeading = styled(Heading)`
   display: -webkit-inline-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  color: ${props => props.theme.colors.secondaryWhite};
   border-bottom: ${props => props.theme.colors.primary} 5px solid;
 `;
 
@@ -128,7 +129,7 @@ const Writing = () => (
         return (
           <CardContainer minWidth="300px">
             {posts.map(p => (
-              <Fade bottom>
+              <Fade bottom key={p.id}>
                 <Post key={p.id} {...p} />
               </Fade>
             ))}
