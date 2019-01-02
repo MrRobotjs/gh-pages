@@ -124,7 +124,7 @@ const Technology = ({
 
 const Technologies = () => (
   <Section.Container id="technologies" Background={Background}>
-    <Section.Header name="Technologies I've Used'" icon="💻" label="notebook" />
+    <Section.Header name="Technologies I've Used" icon="💻" label="notebook" />
     <StaticQuery
       query={graphql`
         query TechnologiesQuery {

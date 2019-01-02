@@ -27,6 +27,16 @@ const RenponsiveLogo = styled.img`
   }
 `;
 
+const Credit = styled.a`
+  font-size: 1rem;
+  color: ${props => props.theme.colors.secondaryLight};
+  text-decoration: none;
+  transition: all 250ms;
+  &:hover {
+    color: ${props => props.theme.colors.primary};
+  }
+`
+
 const Logo = ({ url, logo, alt = '' }) => (
   <Box>
     <a href={url} rel="noopener noreferrer" target="_blank">
@@ -73,6 +83,13 @@ const Footer = () => (
           logo={GatsbyLogo}
           alt="Gatsby Logo"
         />
+      </Flex>
+      <Flex justifyContent="center" alignItems="center">
+        <Text m={2} fontSize={4}>
+          <Credit href="https://github.com/MrRobotjs/gh-pages/" target="blank">
+            Designed & Built by Christopher Ramos
+          </Credit>
+        </Text>
       </Flex>
     </Fade>
   </FooterContainer>
