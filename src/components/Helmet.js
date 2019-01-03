@@ -57,6 +57,8 @@ const Helmet = ({ theme = {} }) => (
           <meta name="twitter:description" content={description} />
           <meta name="twitter:image" content={favicon.bigIcon.src} />
 
+          <meta name="google-site-verification" content="Zt5sU2K6tPs1gQ8svOL8mpctyK9rvpW_qRnKRcNjpaU" />
+
           <link
             rel="apple-touch-icon"
             sizes="180x180"
