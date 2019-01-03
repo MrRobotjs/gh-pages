@@ -31,7 +31,7 @@
     "envfile": "^2.3.0",
     "gatsby": "^2.0.7",
     "gatsby-plugin-favicon": "^3.1.4",
-    "gatsby-plugin-google-analytics": "^2.0.6",
+    "gatsby-plugin-google-analytics": "^2.0.8",
     "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-manifest": "^2.0.2",
     "gatsby-plugin-netlify-cache": "^1.0.0",

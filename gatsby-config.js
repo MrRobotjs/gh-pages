@@ -21,6 +21,9 @@ module.exports = client.getEntries().then(entries => {
       'gatsby-plugin-react-helmet',
       'gatsby-plugin-netlify-cache',
       {
+        trackingId: "UA-131673013-1",
+      },
+      {
         resolve: 'gatsby-plugin-manifest',
         options: manifestConfig,
       },
