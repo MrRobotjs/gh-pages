@@ -60,8 +60,9 @@ const Footer = () => (
           pb={1}
           css={{
             textTransform: 'uppercase',
-            borderBottom: 'white 3px solid',
+            borderBottom: '#43685d 3px solid',
             display: 'table',
+            color: `#64ffda`,
           }}
         >
           Powered By

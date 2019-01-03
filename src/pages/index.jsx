@@ -4,7 +4,7 @@ import Landing from '../sections/Landing';
 import About from '../sections/About';
 import Projects from '../sections/Projects';
 import Writing from '../sections/Writing';
-import Technologies from '../sections/Technologies';
+//import Technologies from '../sections/Technologies';
 import Email from '../sections/Email';
 import Contact from '../sections/Contact';
 import Social from '../sections/Social';
@@ -14,7 +14,6 @@ const IndexPage = () => (
     <Landing />
     <About />
     <Projects />
-    <Technologies />
     <Writing />
     <Email />
     <Contact />

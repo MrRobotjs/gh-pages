@@ -20,11 +20,13 @@ const LinkAnimated = styled.span`
   font-size: 1rem;
 
   &::before {
-  counter-increment: links;
-  content: '0'counter(links)'.';
-  margin-right: 7px;
-  color: ${props => props.theme.colors.primary};
-  font-family: 'Roboto Mono';
+    counter-increment: links;
+    content: '0'counter(links)'.';
+    margin-right: 7px;
+    color: ${props => props.theme.colors.primary};
+    font-family: 'Roboto Mono';
+    position: absolute;
+    left: -34px;
   }
 
   &:after {
@@ -51,7 +53,7 @@ const LinkAnimated = styled.span`
 
 const RouteLink = ({ onClick, selected, children }) => (
   <Label
-    ml={[2, 3]}
+    ml={[3, 5]}
     color="background"
     fontSize={[2, 3]}
     css={{ cursor: 'pointer' }}

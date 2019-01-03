@@ -2,6 +2,7 @@ import React from 'react';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const Background = () => (
   <div>
@@ -50,7 +51,7 @@ const SubText = styled.div`
 `
 
 const ContactWrapper = styled.div`
-    margin: 0 auto;
+    display: flex;
 `
 
 const ContactBtn = styled.a`
@@ -72,11 +73,13 @@ const ContactBtn = styled.a`
 const Contact = () => (
   <Section.Container id="contact" Background={Background}>
     <Section.Header name="What's Next?" icon="📧" label="contact"/>
-    <TextHeader>Get In Touch</TextHeader>
-    <SubText>Although I'm not currently looking for any freelance opportunities, my inbox is always open to work opportunities or open-source projects. Whether for a potential job or just to say hi, I'll try my best to answer your email and get back to you as soon as possible!</SubText>
-    <ContactWrapper>
-        <ContactBtn href="mailto:christopher.ramos.00@outlook.com">Hire Me or Say Hello!</ContactBtn>
-    </ContactWrapper>
+    <Fade bottom>
+      <TextHeader>Get In Touch</TextHeader>
+      <SubText>Although I'm not currently looking for any freelance opportunities, my inbox is always open to work opportunities or open-source projects. Whether for a potential job or just to say hi, I'll try my best to answer your email and get back to you as soon as possible!</SubText>
+      <ContactWrapper>
+          <ContactBtn href="mailto:christopher.ramos.00@outlook.com">Hire Me or Say Hello!</ContactBtn>
+      </ContactWrapper>
+    </Fade>
   </Section.Container>
 );
 
