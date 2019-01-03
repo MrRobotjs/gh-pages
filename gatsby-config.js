@@ -21,7 +21,11 @@ module.exports = client.getEntries().then(entries => {
       'gatsby-plugin-react-helmet',
       'gatsby-plugin-netlify-cache',
       {
-        trackingId: "UA-131673013-1",
+        resolve: `gatsby-plugin-google-analytics`,
+        options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+          trackingId: "UA-131673013-1",
+        },
       },
       {
         resolve: 'gatsby-plugin-manifest',
