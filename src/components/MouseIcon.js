@@ -37,7 +37,7 @@ const ScrollAnimation = keyframes`
 `;
 
 const Mouse = styled.rect.attrs({
-  stroke: props => props.theme.colors.primary,
+  stroke: props => props.theme.colors.primaryColor,
   strokeWidth: '3',
 })``;
 
@@ -48,7 +48,7 @@ const Scroll = styled.circle`
   animation-iteration-count: infinite;
   transform-origin: 50% 20.5px;
   will-change: transform;
-  fill: ${props => props.theme.colors.primary};
+  fill: ${props => props.theme.colors.primaryColor};
 `;
 
 const MouseIcon = () => (

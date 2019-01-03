@@ -21,7 +21,7 @@ const NewCard = styled(CardRebass)`
   transition: all 0.25s;
   top: 0;
   background-color: ${props => props.theme.colors.primaryLight};
-  color: ${props => props.theme.colors.secondaryDarkWhite};
+  color: ${props => props.theme.colors.coloredDarkWhite};
   margin-bottom: 15px;
 
   &>div {

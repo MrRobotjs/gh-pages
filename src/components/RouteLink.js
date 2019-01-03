@@ -11,19 +11,19 @@ const LinkAnimated = styled.span`
   color: inherit;
   border-bottom: ${props => `${props.borderWidth} solid transparent`};
   border-bottom-color: ${props =>
-    props.selected && props.theme.colors.secondaryDark};
+    props.selected && props.theme.colors.primaryColorDark};
   transition: 0.4s;
   scroll-behavior: smooth;
-  color: ${props => props.theme.colors.secondaryDarkWhite};
+  color: ${props => props.theme.colors.coloredDarkWhite};
   color: ${props =>
-    props.selected && props.theme.colors.primary};
+    props.selected && props.theme.colors.primaryColor};
   font-size: 1rem;
 
   &::before {
     counter-increment: links;
     content: '0'counter(links)'.';
     margin-right: 7px;
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primaryColor};
     font-family: 'Roboto Mono';
     position: absolute;
     left: -34px;
@@ -37,7 +37,7 @@ const LinkAnimated = styled.span`
     bottom: -${props => props.borderWidth};
     background: ${props => props.theme.colors.secondaryLight};
     background: ${props =>
-    props.selected && props.theme.colors.secondaryDark};
+    props.selected && props.theme.colors.primaryColorDark};
     height: ${props => props.borderWidth};
     transition-property: width;
     transition-duration: 0.3s;

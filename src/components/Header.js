@@ -31,7 +31,7 @@ const ResumeBtn = styled.label`
   font-size: 16px;
   margin-bottom: 4px;
   margin-left: 2.5rem;
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.primaryColor};
   cursor: pointer;
 `
 

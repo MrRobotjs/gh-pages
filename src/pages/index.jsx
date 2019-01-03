@@ -15,8 +15,8 @@ const IndexPage = () => (
     <About />
     <Projects />
     <Writing />
-    <Email />
     <Contact />
+    <Email />
     <Social />
   </Layout>
 );

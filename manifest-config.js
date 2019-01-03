@@ -5,7 +5,7 @@ module.exports = {
   short_name: `Christopher's Portfolio`,
   start_url: '/',
   background_color: theme.colors.background,
-  theme_color: theme.colors.primary,
+  theme_color: theme.colors.primaryColor,
   display: `standalone`,
   icon: 'media/icon.png',
 };

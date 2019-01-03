@@ -18,19 +18,19 @@ const Text = styled.a`
     transition: all 0.25s ease-out;
     writing-mode: vertical-rl;
     text-decoration: unset;
-    color: ${props => props.theme.colors.secondaryDarkWhite};
+    color: ${props => props.theme.colors.coloredDarkWhite};
     font-weight: 600;
     position: relative;
 
     &:hover {
-        color: ${props => props.theme.colors.primaryBrightText};
+        color: ${props => props.theme.colors.primaryColorLight};
     }
     &::after {
         content: "";
         display: block;
         width: 2px;
         height: 100%;
-        background-color: ${props => props.theme.colors.secondaryDarkWhite};
+        background-color: ${props => props.theme.colors.coloredDarkWhite};
         margin: 0px auto;
         position: fixed;
         top: 83%;

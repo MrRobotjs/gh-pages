@@ -18,7 +18,7 @@ const Background = () => (
     />
 
     <Triangle
-      color="secondary"
+      color="secondaryDark"
       height={['50vh', '40vh']}
       width={['70vw', '40vw']}
       invertY
@@ -45,8 +45,8 @@ const EllipsisHeading = styled(Heading)`
   display: -webkit-inline-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  color: ${props => props.theme.colors.secondaryWhite};
-  border-bottom: ${props => props.theme.colors.primary} 5px solid;
+  color: ${props => props.theme.colors.coloredWhite};
+  border-bottom: ${props => props.theme.colors.primaryColor} 5px solid;
 `;
 
 const Post = ({ title, text, image, url, date, time }) => {

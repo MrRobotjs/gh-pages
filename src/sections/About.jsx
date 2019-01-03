@@ -65,7 +65,7 @@ const About = () => (
       render={data => {
         const { aboutMe, profile } = data.contentfulAbout;
         return (
-          <Flex justifyContent="center" alignItems="center" flexWrap="wrap" color="secondaryDarkWhite">
+          <Flex justifyContent="center" alignItems="center" flexWrap="wrap" color="coloredDarkWhite">
             <Box width={[1, 1, 4 / 6]}>
               <Fade bottom>
                 <ReactMarkdown

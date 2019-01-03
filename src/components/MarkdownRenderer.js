@@ -10,7 +10,7 @@ const fixStyledComponent = StyledComponent => ({ children, ...props }) => (
 const StyledLink = styled.a`
   display: inline-block;
   transition: color 250ms, text-shadow 250ms;
-  color: ${props => props.theme.colors.primaryBrightText};
+  color: ${props => props.theme.colors.primaryColorLight};
   text-decoration: none;
   cursor: pointer;
   position: relative;
@@ -24,7 +24,7 @@ const StyledLink = styled.a`
     content: '';
     width: 100%;
     height: 3px;
-    background-color: ${props => props.theme.colors.primaryBrightText};
+    background-color: ${props => props.theme.colors.primaryColorLight};
     transition: all 250ms;
   }
 

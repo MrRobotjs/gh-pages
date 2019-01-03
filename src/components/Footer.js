@@ -8,7 +8,7 @@ import GatsbyLogo from './Logo/Gatsby.svg';
 
 const FooterContainer = styled.footer`
   padding: 1em;
-  background: ${props => props.theme.colors.primaryDark};
+  background: ${props => props.theme.colors.backgroundDark};
   color: ${props => props.theme.colors.background};
   display: flex;
   flex: 0 1 auto;
@@ -33,7 +33,7 @@ const Credit = styled.a`
   text-decoration: none;
   transition: all 250ms;
   &:hover {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primaryColor};
   }
 `
 

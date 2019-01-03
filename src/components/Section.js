@@ -62,7 +62,7 @@ const LinkAnimated = styled.span`
   position: relative;
   margin-bottom: 0;
   padding-bottom: 5px;
-  color: ${props => props.theme.colors.secondaryBrightText};
+  color: ${props => props.theme.colors.coloredSecondaryWhite};
   border-bottom: ${props =>
     `${props.borderWidth} dashed ${props.theme.colors.primaryLight}`};
   transition: 0.4s;
@@ -72,7 +72,7 @@ const LinkAnimated = styled.span`
   content: '0'counter(headers)'.';
   margin-right: 7px;
   font-size: 1.4rem;
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.primaryColor};
   font-family: 'Roboto Mono';
   }
 
@@ -82,7 +82,7 @@ const LinkAnimated = styled.span`
     right: 0;
     width: 0;
     bottom: -${props => props.borderWidth};
-    background: ${props => props.theme.colors.secondaryDark};
+    background: ${props => props.theme.colors.primaryColorDark};
     height: ${props => props.borderWidth};
     transition-property: width;
     transition-duration: 0.3s;
@@ -98,7 +98,7 @@ const LinkAnimated = styled.span`
 
 const Header = ({ name, icon = '', label = '' }) => (
   <Slide left>
-    <Heading color="secondaryDark" mb={4} className={name}>
+    <Heading color="primaryColorDark" mb={4} className={name}>
       <LinkAnimated borderWidth="5px">
         {name}
         {icon && (

@@ -47,7 +47,7 @@ const Title = styled(Subhead)`
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${props => props.theme.colors.primary} 3px solid;
+  border-bottom: ${props => props.theme.colors.primaryColor} 3px solid;
 `;
 
 const TextContainer = styled.div`
@@ -108,7 +108,7 @@ const Project = ({
     <Flex>
       <TextContainer>
         <span>
-          <Title my={2} pb={1} color="secondaryBrightText">
+          <Title my={2} pb={1} color="coloredSecondaryWhite">
             {name}
           </Title>
         </span>
@@ -134,8 +134,8 @@ const Project = ({
         <SocialLinksContainer>
           <Label mx={1} fontSize={5}>
             <SocialLink
-              color="secondaryDarkWhite"
-              hoverColor="primary"
+              color="coloredDarkWhite"
+              hoverColor="primaryColor"
               name="Check repository"
               fontAwesomeIcon="github"
               url={repositoryUrl}
@@ -144,8 +144,8 @@ const Project = ({
           {projectUrl && 
             <Label mx={1} fontSize={5}>
               <SocialLink
-                color="secondaryDarkWhite"
-                hoverColor="primary"
+                color="coloredDarkWhite"
+                hoverColor="primaryColor"
                 fontSize={5}
                 mx={1}
                 name="See project"

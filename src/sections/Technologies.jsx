@@ -47,7 +47,7 @@ const Title = styled(Subhead)`
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${props => props.theme.colors.primary} 3px solid;
+  border-bottom: ${props => props.theme.colors.primaryColor} 3px solid;
 `;
 
 const TextContainer = styled.div`
@@ -109,7 +109,7 @@ const Technology = ({
     <Flex>
       <TextContainer>
         <span>
-          <Title my={2} pb={1} color="secondaryBrightText">
+          <Title my={2} pb={1} color="coloredSecondaryWhite">
             {node.name}
           </Title>
         </span>

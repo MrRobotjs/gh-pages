@@ -17,7 +17,7 @@ const SocialWrapper = styled.div`
         display: block;
         width: 2px;
         height: 100%;
-        background-color: ${props => props.theme.colors.secondaryDarkWhite};
+        background-color: ${props => props.theme.colors.coloredDarkWhite};
         margin: 0px auto;
         position: fixed;
         top: 85%;
@@ -30,7 +30,7 @@ const Url = styled.a`
     transition: all 0.25s ease-out;
     writing-mode: vertical-rl;
     text-decoration: unset;
-    color: ${props => props.theme.colors.secondaryDarkWhite};
+    color: ${props => props.theme.colors.coloredDarkWhite};
     font-weight: 600;
     position: relative;
     display: block;
@@ -46,11 +46,11 @@ const Icon = styled.div`
     width: 1.4rem;
     svg {
         width: 1.4rem;
-        fill: ${props => props.theme.colors.secondaryDarkWhite};
+        fill: ${props => props.theme.colors.coloredDarkWhite};
         height: auto;
         transition: all 0.25s ease-out;
         &:hover {
-            fill: ${props => props.theme.colors.primary};
+            fill: ${props => props.theme.colors.primaryColor};
         }
     }
 `;

@@ -14,7 +14,7 @@ const Background = () => (
     />
 
     <Triangle
-      color="secondary"
+      color="secondaryDark"
       height={['50vh', '40vh']}
       width={['70vw', '40vw']}
       invertY
@@ -40,7 +40,7 @@ const TextHeader = styled.div`
 
 const SubText = styled.div`
     font-size: 1rem;
-    color: ${props => props.theme.colors.secondaryDarkWhite};
+    color: ${props => props.theme.colors.coloredDarkWhite};
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -56,7 +56,7 @@ const ContactWrapper = styled.div`
 
 const ContactBtn = styled.a`
     font-size: 1rem;
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primaryColor};
     text-align: center;
     margin: 0 auto;
     border: 1px solid;
