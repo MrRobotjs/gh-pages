@@ -61,12 +61,25 @@ const Header = styled.div`
   flex-direction: column;
   margin-bottom: 10px;
 `
+const Head = styled.p`
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: ${props => props.theme.colors.White};
+  margin: unset;
+  line-height: 1.6rem;
+  @media (min-width: 850px) {
+    line-height: 1.8rem;
+  }
+`
 const Title = styled.p`
   font-size: 1.5rem;
   font-weight: bold;
-  color: ${props => props.theme.colors.coloredSecondaryWhite};
+  color: ${props => props.theme.colors.coloredWhite};
   margin: unset;
-  line-height: 1.8em;
+  line-height: 1.6rem;
+  @media (min-width: 850px) {
+    line-height: 1.8rem;
+  }
 `
 const At = styled.a`
   font-size: 1.5rem;
@@ -103,6 +116,22 @@ const At = styled.a`
     }
 `
 const Date = styled.p`
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: ${props => props.theme.colors.coloredDarkWhite};
+  margin: unset;
+  line-height: 2rem;
+  @media (min-width: 850px) {
+    line-height: 1.7rem;
+  }
+`
+const ListsWrapper = styled.div`
+  display: flex;
+`
+const List = styled.ul`
+  margin: unset;
+`
+const Item = styled.li`
   font-size: 0.8rem;
   font-weight: 500;
   color: ${props => props.theme.colors.coloredDarkWhite};
@@ -178,10 +207,27 @@ const About = () => (
                       </Header>
                     </TabPanel>
                     <TabPanel>
-                      <Title>Where I've Worked</Title>
+                      <Head>Where I've Worked</Head>
+                      <Header>
+                        <Title>Cashier / Busser Boy <At href="https://www.juicysfood.com/" target="blank"> @ Juicy's Food</At></Title>
+                        <Date>From 2018 - 2018</Date>
+                      </Header>
+                      <p>Responsibilities:</p>
+                      <ListsWrapper>
+                        <List>
+                          <Item>Cashier</Item>
+                          <Item>Attending Customers</Item>
+                          <Item>Cleaned Floors</Item>
+                        </List>
+                        <List>
+                          <Item>Managed Other Cashiers</Item>
+                          <Item>Cleaned Tables</Item>
+                          <Item>Washed Dishes</Item>
+                        </List>
+                      </ListsWrapper>
                     </TabPanel>
                     <TabPanel>
-                      <Title>Technologies I've Used</Title>
+                      <Head>Technologies I've Used</Head>
                     </TabPanel>
                   </Tabs>
                 </Fade>

@@ -12,7 +12,7 @@ const colors = {
   secondaryLight: '#43685d',
   secondaryDark: '#173530',
 
-  White: '#e6f1ff',
+  White: '#e6fffc',
   coloredWhite: '#ccf6ec',
   coloredSecondaryWhite: '#e6fff6',
   coloredDarkWhite: '#88b0a6',
