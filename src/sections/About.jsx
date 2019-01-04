@@ -66,20 +66,14 @@ const Head = styled.p`
   font-weight: bold;
   color: ${props => props.theme.colors.White};
   margin: unset;
-  line-height: 2rem;
-  @media (min-width: 850px) {
-    line-height: 1.8rem;
-  }
+  line-height: 2.8rem;
 `
 const Title = styled.p`
   font-size: 1.5rem;
   font-weight: bold;
   color: ${props => props.theme.colors.coloredWhite};
   margin: unset;
-  line-height: 1.9rem;
-  @media (min-width: 850px) {
-    line-height: 1.8rem;
-  }
+  line-height: 2rem;
 `
 const At = styled.a`
   font-size: 1.5rem;
@@ -130,6 +124,7 @@ const ListsWrapper = styled.div`
 `
 const List = styled.ul`
   margin: unset;
+  list-style-type: none;
 `
 const Item = styled.li`
   font-size: 0.8rem;
@@ -137,6 +132,15 @@ const Item = styled.li`
   color: ${props => props.theme.colors.coloredDarkWhite};
   margin: unset;
   line-height: 1.7em;
+  position: relative;
+  display: list-item;
+  &::before {
+    content: "▹";
+    position: absolute;
+    left: -20px;
+    color: ${props => props.theme.colors.primaryColor};
+    line-height: 20px;
+  }
 `
 
 const About = () => (
@@ -194,6 +198,7 @@ const About = () => (
                       <Tab>Education</Tab>
                       <Tab>Expereience</Tab>
                       <Tab>Technologies</Tab>
+                      <Tab>Softwares</Tab>
                     </TabList>
 
                     <TabPanel>
@@ -227,7 +232,49 @@ const About = () => (
                       </ListsWrapper>
                     </TabPanel>
                     <TabPanel>
-                      <Head>Technologies I've Used</Head>
+                      <Head>Technologies I've Used</Head><br/>
+                      <ListsWrapper>
+                        <List>
+                          <Item>HTML</Item>
+                          <Item>CSS</Item>
+                          <Item>SCSS</Item>
+                          <Item>Less</Item>
+                          <Item>Jekyll</Item>
+                        </List>
+                        <List>
+                          <Item>Bootstrap</Item>
+                          <Item>Netlify/CMS</Item>
+                          <Item>React</Item>
+                          <Item>Liquid</Item>
+                          <Item>Gatsbyjs</Item>
+                        </List>
+                        <List>
+                          <Item>GraphQL</Item>
+                          <Item>Git</Item>
+                          <Item>Javascript</Item>
+                          <Item>Node.js</Item>
+                          <Item>Python</Item>
+                          <Item>C</Item>
+                        </List>
+                      </ListsWrapper>
+                    </TabPanel>
+                    <TabPanel>
+                      <Head>Softwares I've Used</Head><br/>
+                      <ListsWrapper>
+                        <List>
+                          <Item>Adobe Photoshop</Item>
+                          <Item>Adobe XD</Item>
+                          <Item>Adobe Illustrator</Item>
+                          <Item>Adobe Dreamweaver</Item>
+                          <Item>Adobe Flash</Item>
+                        </List>
+                        <List>
+                          <Item>Adobe Sketch</Item>
+                          <Item>Adobe Premiere Pro</Item>
+                          <Item>All Microsoft Office Programs</Item>
+                          <Item>Github</Item>
+                        </List>
+                      </ListsWrapper>
                     </TabPanel>
                   </Tabs>
                 </Fade>
