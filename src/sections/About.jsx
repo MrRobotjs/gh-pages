@@ -7,6 +7,9 @@ import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import "react-tabs/style/react-tabs.css";
+import "../styles/Tabs.css";
 
 const Background = () => (
   <div>
@@ -41,13 +44,79 @@ const ProfilePicture = styled(Image)`
   }
 `;
 
+const TabWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-basis: 90%;
+  overflow: hidden;
+  @media (min-width: 850px) {
+    flex-basis: 70%;
+  }
+  [class="react-reveal"] {
+    overflow: hidden;
+  }
+`
+const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+`
+const Title = styled.p`
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: ${props => props.theme.colors.coloredSecondaryWhite};
+  margin: unset;
+  line-height: 1.8em;
+`
+const At = styled.a`
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: ${props => props.theme.colors.primaryColor};
+  transition: 250ms linear;
+  display: inline-block;
+    transition: color 250ms, text-shadow 250ms;
+    color: ${props => props.theme.colors.primaryColorLight};
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      z-index: -1;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: ${props => props.theme.colors.primaryColorLight};
+      transition: all 250ms;
+    }
+
+    &:hover {
+      color: black;
+
+      &::after {
+        height: 110%;
+        width: 102.5%;
+      }
+    }
+`
+const Date = styled.p`
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: ${props => props.theme.colors.coloredDarkWhite};
+  margin: unset;
+  line-height: 1.7em;
+`
+
 const About = () => (
   <Section.Container id="about" Background={Background}>
     <Section.Header name="About me" icon="🙋‍♂️" label="person" />
     <StaticQuery
       query={graphql`
         query AboutMeQuery {
-          contentfulAbout {
+          about:contentfulAbout {
             aboutMe {
               childMarkdownRemark {
                 rawMarkdownBody
@@ -63,7 +132,7 @@ const About = () => (
         }
       `}
       render={data => {
-        const { aboutMe, profile } = data.contentfulAbout;
+        const { aboutMe, profile, test } = data.about;
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap" color="coloredDarkWhite">
             <Box width={[1, 1, 4 / 6]}>
@@ -73,6 +142,7 @@ const About = () => (
                   renderers={markdownRenderer}
                 />
               </Fade>
+              
             </Box>
 
             <Box
@@ -88,6 +158,34 @@ const About = () => (
                 />
               </Fade>
             </Box>
+              <TabWrapper>
+                <Fade Bottom>
+                  <Tabs defaultIndex={0} onSelect={index => console.log(`Tab number ` + index + ` has been opened`)}>
+                    <TabList>
+                      <Tab>Education</Tab>
+                      <Tab>Expereience</Tab>
+                      <Tab>Technologies</Tab>
+                    </TabList>
+
+                    <TabPanel>
+                      <Header>
+                        <Title>CS Bachelor's Degree <At href="https://www.mtsac.edu/" target="blank"> @ Mt. SAC</At></Title>
+                        <Date><b>Ongoing</b> 2019 - 2025</Date>
+                      </Header>
+                      <Header>
+                        <Title>High School Diploma <At href="https://goo.gl/maps/s3vaStfxg9E2" target="blank"> @ Ontario High School</At></Title>
+                        <Date>From 2014 - 2018</Date>
+                      </Header>
+                    </TabPanel>
+                    <TabPanel>
+                      <Title>Where I've Worked</Title>
+                    </TabPanel>
+                    <TabPanel>
+                      <Title>Technologies I've Used</Title>
+                    </TabPanel>
+                  </Tabs>
+                </Fade>
+              </TabWrapper>
           </Flex>
         );
       }}
