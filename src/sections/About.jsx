@@ -38,9 +38,12 @@ const Background = () => (
 const ProfilePicture = styled(Image)`
   border-radius: 50%;
   transition: all 0.25s ease-out;
+  filter: hue-rotate(130deg);
+  box-shadow: 5px 6px 15px 2px rgba(0, 0, 0, 0.45);
 
   &:hover {
     border-radius: 20%;
+    filter: hue-rotate(0deg);
   }
 `;
 
@@ -52,7 +55,7 @@ const TabWrapper = styled.div`
   @media (min-width: 850px) {
     flex-basis: 70%;
   }
-  [class="react-reveal"] {
+  &>[class="react-reveal"] {
     overflow: hidden;
   }
 `
@@ -181,7 +184,7 @@ const About = () => (
 
             <Box
               width={[1, 1, 2 / 6]}
-              css={{ maxWidth: '300px', margin: 'auto' }}
+              css={{ maxWidth: '300px', margin: 'auto', position: 'relative' }}
             >
               <Fade right>
                 <ProfilePicture
