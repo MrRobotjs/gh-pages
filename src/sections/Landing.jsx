@@ -70,13 +70,13 @@ const Background = () => (
     />
 
     <Triangle
-      color="secondaryDark"
+      color="primaryDark"
       height={['38vh', '80vh']}
       width={['50vw', '35vw']}
     />
 
     <Triangle
-      color="primaryDark"
+      color="secondaryDark"
       height={['25vh', '35vh']}
       width={['75vw', '60vw']}
       invertX
@@ -114,7 +114,7 @@ const LandingPage = () => (
 
         return (
           <Fragment>
-            <Fade right>
+            <Fade left>
               <SmallHeader>Hi, my name is</SmallHeader>
             </Fade>
             <Fade bottom>
@@ -127,7 +127,6 @@ const LandingPage = () => (
               >
                 {`${name}.`}
               </Heading>
-
               <Heading
                 is="h2"
                 color="coloredDarkWhite"
@@ -147,6 +146,7 @@ const LandingPage = () => (
               <SubText>
                 I'm a software engineer/web designer based in <a href="https://goo.gl/maps/vBAByYECqVS2" target="blank">Ontario, CA</a> specializing in designing and designing exceptional, high-quality websites and applications for the web. You can get the document version of my resume <a href="https://docs.google.com/document/d/1t1MEK4x3o-WOp8yK2aU1jbu3wN_hmqh0lOeejQ7wCFM/edit?usp=sharing" target="blank">here</a>.
               </SubText>
+              </Fade>
               <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
                 {socialLinks.map(({ id, ...rest }) => (
                   <Label mx={3} fontSize={[5, 6, 6]} key={id}>
@@ -159,7 +159,6 @@ const LandingPage = () => (
                 ))}
               </Flex>
               <MouseIcon />
-            </Fade>
           </Fragment>
         );
       }}
