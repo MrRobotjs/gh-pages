@@ -121,6 +121,7 @@ const Date = styled.p`
 `
 const ListsWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `
 const List = styled.ul`
   margin: unset;
