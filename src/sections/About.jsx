@@ -66,7 +66,7 @@ const Head = styled.p`
   font-weight: bold;
   color: ${props => props.theme.colors.White};
   margin: unset;
-  line-height: 1.6rem;
+  line-height: 1.7rem;
   @media (min-width: 850px) {
     line-height: 1.8rem;
   }
